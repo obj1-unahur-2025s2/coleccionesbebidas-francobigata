@@ -28,3 +28,27 @@ object terere {
         //tambien (cantidad * 0.1).max(1)
     }
 }
+
+object licuadoDeFrutas {
+    const property nutrientes = []
+
+    method agregarNutrientes(unNutriente) {
+        nutrientes.add(unNutriente)
+      
+    }
+    method rendimiento(cantidad) {
+        //return nutrientes.sum({unaFruta -> unaFruta.nutrientes()})
+        return nutrientes.sum() * 1.max((cantidad.div(1000)))
+      
+    }
+
+}
+
+object saborizada {
+    method rendimiento(cantidad) {
+
+        return 1+ bebida.rendimiento(cantidad)/ 4
+      
+    }
+  
+}
