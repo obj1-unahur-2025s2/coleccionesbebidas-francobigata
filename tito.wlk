@@ -45,9 +45,31 @@ object licuadoDeFrutas {
 }
 
 object saborizada {
+    var  bebida = wisky
+
+    method mezclarCon(unaBebida) {
+        bebida = unaBebida
+      
+    }   
     method rendimiento(cantidad) {
 
         return 1+ bebida.rendimiento(cantidad)/ 4
+      
+    }
+  
+}
+
+object coctel {
+    const bebidas = #{}
+
+    method agregarBebida(unaBebida) {
+        bebidas.add(unaBebida)
+    }
+
+
+    method rendimiento(cantidad) {
+        var total = 1
+        return bebidas.forEach{ unaBebida => total = unaBebida.rendimiento(cantidad/bebidas.size()) * total }
       
     }
   
